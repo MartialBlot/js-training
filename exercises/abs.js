@@ -10,11 +10,12 @@
  */
 
 // Your code :
-function abs(){
+function abs(num){
     if (num>0){
         return num;
     }
-    else{ return num * -1;}
+    else if(num<0){ return num * -1;}
+    else if(num===0){return 0}
 }
 
 //* Begin of tests

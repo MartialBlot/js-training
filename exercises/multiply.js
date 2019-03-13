@@ -9,7 +9,40 @@
  */
 
 // Your code :
-
+function multiply(a, b){
+    let result=0;
+    if (a===0 || b===0){
+        return 0;
+    }
+    else if (b<0 && a<0){
+        a=Math.abs(a);
+        b=Math.abs(b);
+        for (let i=0; i<a;i++){
+            result=result+b;
+        }
+        return result;
+    }
+    else if (a<0){
+        a=Math.abs(a);
+        for (let i=0; i<b;i++){
+            result=result+a;
+        }
+        return -result;
+    }
+    else if (b<0){
+        b=Math.abs(b);
+        for (let i=0; i<a;i++){
+            result=result+b;
+        }
+        return -result;
+    }
+    else{
+        for (let i=0; i<b;i++){
+            result=result+a;
+        }
+        return result;
+    }
+}
 //* Begin of tests
 const assert = require('assert')
 
